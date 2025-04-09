@@ -27,7 +27,12 @@ const MovieDetail = () => {
 
   if (loading) return <div>Loading movie details...</div>;
 
-  if (!movieDetail) return <div>Movie not found.</div>;
+  if (!movieDetail) {
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 2000);
+    return <div>Movie not found.</div>;
+  }
 
   return (
     <div>

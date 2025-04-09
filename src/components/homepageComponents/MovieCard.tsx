@@ -1,4 +1,4 @@
-import { movie } from "../types/movie";
+import { movie } from "../../types/movie";
 import { Link } from "react-router-dom";
 
 type MovieCardProps = {

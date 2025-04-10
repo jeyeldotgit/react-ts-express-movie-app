@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Russo+One&display=swap");
+@import "tailwindcss";
+
+/* COLOR SCHEME */
+@theme {
+  --color-background: linear-gradient(to right, #06142e, #0a1f44);
+  --color-card: #1a1a1a;
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #b3b3b3;
+  --color-accent-red: #d72638;
+  --color-accent-blue: #008cff;
+  --color-accent-gold: #f5a623;
+  --color-accent-purple: #6a0dad;
+  --color-hover-red: rgba(255, 0, 0, 0.3);
+  --color-hover-blue: rgba(0, 140, 255, 0.3);
+  --color-shadow: rgba(0, 0, 0, 0.6);
+  --font-russo: "Russo One", sans-serif;
+  --font-roboto: "Roboto Mono", monospace;
+}
+
+@font-face {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}

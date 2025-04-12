@@ -7,8 +7,13 @@ type MovieCardProps = {
 
 const MovieCard = ({ movie }: MovieCardProps) => {
   return (
-    <div className="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 h-96">
-      <Link to={`/movie/${movie.id}`} className="block h-full">
+    <div className="bg-gray-800 text-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 h-96 ">
+      <Link
+        to={`/movie/${movie.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full"
+      >
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}

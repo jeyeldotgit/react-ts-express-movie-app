@@ -8,6 +8,7 @@ import MovieList from "../components/homepageComponents/MovieList";
 import PaginationControls from "../components/homepageComponents/PaginationControls";
 import HeaderWithSearch from "../components/homepageComponents/HeaderWithSearch";
 import Hero from "../components/sections/Hero";
+import Loading from "../components/loadingComponent/Loading";
 
 const Homepage = () => {
   const [movies, setMovies] = useState<movie[]>([]);
@@ -60,7 +61,11 @@ const Homepage = () => {
     }
   };
 
-  if (loading) return <p>Loading movies...</p>;
+  const handleLoading = () => {
+    if (loading) {
+      return <Loading />;
+    }
+  };
 
   return (
     <div className="bg-[linear-gradient(to_right,#06142E,#0A1F44)] w-full min-h-screen">
@@ -69,7 +74,7 @@ const Homepage = () => {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
       ></HeaderWithSearch>
-      <MovieList movies={movies} />
+      {loading ? handleLoading() : <MovieList movies={movies} />}
       <PaginationControls
         currentPage={currentPage}
         totalPages={totalPages}

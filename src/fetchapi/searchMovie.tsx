@@ -1,8 +1,9 @@
 import { movie } from "../types/movie";
+import BASE_URL from "../utils/BaseURL";
 
 export const searchMovie = async (query: string): Promise<movie[]> => {
   try {
-    const response = await fetch("http://localhost:3001/search?query=" + query);
+    const response = await fetch(`${BASE_URL}/search?query=` + query);
     const data = await response.json();
     const searchResults = data.results as movie[];
     return searchResults;

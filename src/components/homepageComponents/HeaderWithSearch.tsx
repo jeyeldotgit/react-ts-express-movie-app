@@ -5,7 +5,7 @@ type HeaderProps = {
 
 const Header = ({ searchTerm, setSearchTerm }: HeaderProps) => {
   return (
-    <nav className="bg-gray-900 text-white w-full shadow-md font-russo z-50 relative">
+    <nav className="bg-gray-900 text-white w-full shadow-md font-russo z-50  right-0">
       <div className="mx-auto flex justify-between items-center px-8 py-4 md:px-10">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold text-accent-blue">

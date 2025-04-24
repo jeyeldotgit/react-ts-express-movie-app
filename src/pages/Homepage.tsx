@@ -68,18 +68,22 @@ const Homepage = () => {
   };
 
   return (
-    <div className="bg-[linear-gradient(to_right,#06142E,#0A1F44)] w-full min-h-screen">
-      <Hero></Hero>
-      <HeaderWithSearch
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-      ></HeaderWithSearch>
-      {loading ? handleLoading() : <MovieList movies={movies} />}
-      <PaginationControls
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+    <div className="bg-[linear-gradient(to_right,#06142E,#0A1F44)] w-full">
+      <section className="max-h-screen">
+        <Hero></Hero>
+      </section>
+      <section className="min-h-screen">
+        <HeaderWithSearch
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        ></HeaderWithSearch>
+        {loading ? handleLoading() : <MovieList movies={movies} />}
+        <PaginationControls
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </section>
     </div>
   );
 };
